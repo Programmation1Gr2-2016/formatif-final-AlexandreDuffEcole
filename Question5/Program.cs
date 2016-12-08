@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace Question5
 {
+    /// <summary>
+    /// Entête???
+    /// 10/15
+    /// </summary>
+
     class Program
     {
         static void Main(string[] args)
         {
-            bool [] tabCellulle = new bool[100];
-            string key = "";
+            bool [] tabCellulle = new bool[100];    // Serait-il possible de trouver un nom plus significatif?
+            string key = "";                        // ??
             Random rnd = new Random();
             int random;
             int position = 0;
@@ -28,9 +33,9 @@ namespace Question5
 
 
 
-            for (int i = 1; i < 99 ; i++)
+            for (int i = 1; i < 99 ; i++)           // Super!
             {
-                random = rnd.Next(1, 3);
+                random = rnd.Next(1, 3);            // Bien, je préférerais (0,2) 0: false, 1:true
                 if(random == 1)
                 {
                     tabCellulle[i] = true;
@@ -118,7 +123,7 @@ namespace Question5
                         Console.WriteLine("Ce mouvement est impossible");
                     }
                 }
-                else if (key == "Q")
+                else if (key == "Q")                // OK : Ça marche mais c'est +/- clair. J'aurais ajouté key == "Q" dans la condition while
                 {
                     possible = false;
                 }
@@ -141,7 +146,7 @@ namespace Question5
                 {
                     if(tabCellulle[i + position] == true)
                     {
-                        i = 10;
+                        i = 10;                 // Pas clean
                         Console.WriteLine("Vous pouvez encore aller plus loin :)");
                     }
                     else if (tabCellulle[i + position] == false)
@@ -167,7 +172,7 @@ namespace Question5
 
         }
 
-
+        // Incomplet
         private static void AffichageEntier()
         {
 
